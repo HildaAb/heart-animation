@@ -6,5 +6,14 @@ bodyEl.addEventListener("mousemove", (event) => {
   const spanEl = document.createElement("span");
   spanEl.style.left = xPos + "px";
   spanEl.style.top = yPos + "px";
+
+  const size = Math.random() * 100;
+  spanEl.style.width = size + "px";
+  spanEl.style.height = size + "px";
+
   bodyEl.appendChild(spanEl);
+
+  setTimeput(() => {
+    spanEl.removeAttribute();
+  }, 3000);
 });
